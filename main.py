@@ -38,7 +38,7 @@ def n2w(n):
 def save_mp3(filename, url):
     response = requests.get(url, stream=True)
     if response.status_code == 200:
-        with open('mp3/{}.mp3'.format(filename), 'wb') as f:
+        with open('data/mp3/{}.mp3'.format(filename), 'wb') as f:
             for chunk in response:
                 f.write(chunk)
 
